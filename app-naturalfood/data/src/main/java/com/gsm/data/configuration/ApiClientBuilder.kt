@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import org.omg.PortableInterceptor.Interceptor
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class ApiClientBuilder {
@@ -24,16 +25,15 @@ class ApiClientBuilder {
                 .connectTimeout(5, TimeUnit.SECONDS)
                 .build()
 
-            val retrofit = getClientBuilder(
-
-            )
+            val retrofit = getClientBuilder(baseUrl, gson).client(client).build()
+            return retrofit.create(serviceClass)
 
         }
 
         private fun getClientBuilder(baseUrl: String, gson: Gson): Retrofit.Builder {
             return Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory)
+                .addConverterFactory(GsonConverterFactory.create(gson))
         }
 
     }
