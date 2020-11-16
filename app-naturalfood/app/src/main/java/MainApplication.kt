@@ -23,7 +23,8 @@ class MainApplication : Application() {
         viewModelModule,
         useCaseModule,
         repositoryModule,
-        dataSourceModule
+        dataSourceModule,
+        networkServiceModule
     )
 
 }
