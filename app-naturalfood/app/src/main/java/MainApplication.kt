@@ -1,3 +1,5 @@
+package com.gsm.naturalfood
+
 import android.app.Application
 import com.gsm.naturalfood.di.*
 import org.koin.android.ext.koin.androidContext
