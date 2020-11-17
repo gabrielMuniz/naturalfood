@@ -1,8 +1,8 @@
-package com.gsm.data.features.places.datasource.contract
+package com.gsm.domain.features.places.contracts
 
 import com.gsm.domain.features.places.Place
 
-interface PlaceDataSource {
+interface PlaceRepository {
 
     suspend fun getPlaces(): List<Place>
 

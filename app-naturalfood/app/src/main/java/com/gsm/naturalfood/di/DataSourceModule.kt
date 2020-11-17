@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 val dataSourceModule = module {
 
-    factory { PlaceDataSourceImpl() as PlaceDataSource }
+    factory { PlaceDataSourceImpl(get(), get()) as PlaceDataSource }
 
 }

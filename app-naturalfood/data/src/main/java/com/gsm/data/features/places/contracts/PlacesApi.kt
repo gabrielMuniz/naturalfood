@@ -8,6 +8,6 @@ import retrofit2.http.GET
 interface PlacesApi {
 
     @GET
-    fun getPlaces(): Call<ResponseBase<List<PlaceResponse>>>
+    fun getPlaces(): Call<List<PlaceResponse>>
 
 }
