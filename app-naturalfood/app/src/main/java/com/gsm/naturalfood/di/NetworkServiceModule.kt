@@ -10,7 +10,7 @@ import org.koin.dsl.module
 val networkServiceModule = module {
 
     single {
-        RequestMakerImpl()
+        RequestMakerImpl() as RequestMaker
     }
 
     single {

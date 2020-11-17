@@ -2,17 +2,21 @@ package features.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.gsm.domain.features.places.Place
 import com.gsm.domain.features.places.interactors.PlaceUseCase
+import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class MainViewModel(private val placeUseCase: PlaceUseCase) : ViewModel() {
 
     val state = MutableLiveData<State>()
 
-    suspend fun getPlaces() {
+    fun getPlaces() {
         try {
-            placeUseCase.getPlaces()
+            viewModelScope.launch {
+                placeUseCase.getPlaces()
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }

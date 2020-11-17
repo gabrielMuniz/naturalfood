@@ -1,29 +1,25 @@
-package com.gsm.naturalfood.features.main
+package features.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gsm.domain.features.places.Place
 import com.gsm.naturalfood.R
-import features.main.MainViewModel
 import features.main.MainViewModel.State.OnError
 import features.main.MainViewModel.State.OnLoading
 import features.main.MainViewModel.State.OnSuccess
 import features.main.adapters.PlaceAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.getViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel by lazy { getViewModel<MainViewModel>() }
+    private val viewModel : MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         observeData()
-        GlobalScope.launch { viewModel.getPlaces() }
+        viewModel.getPlaces()
     }
 
     private fun observeData() {

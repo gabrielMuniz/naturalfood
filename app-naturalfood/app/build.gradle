@@ -23,7 +23,7 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
-            buildConfigField("String", "BASE_URL", "\"http://www.amock.io/api/gmuniz/places\"")
+            buildConfigField("String", "BASE_URL", "\"http://www.amock.io/api/gmuniz/\"")
         }
         release {
             minifyEnabled false

@@ -14,12 +14,9 @@ class ApiClientBuilder {
             serviceClass: Class<S>,
             baseUrl: String,
             readTimeoutInMills: Long = 100000L,
-            gson: Gson = Gson(),
-            vararg interceptors: Interceptor? = arrayOf()
+            gson: Gson = Gson()
         ): S {
             val httpClientBuilder = OkHttpClient.Builder()
-
-            //interceptors.forEach { interceptor -> httpClientBuilder.addInterceptor(interceptor) }
 
             val client = httpClientBuilder.readTimeout(readTimeoutInMills, TimeUnit.MILLISECONDS)
                 .connectTimeout(5, TimeUnit.SECONDS)

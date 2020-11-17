@@ -22,11 +22,11 @@ class MainApplication : Application() {
     }
 
     private fun getModules() = listOf(
-        viewModelModule,
-        useCaseModule,
-        repositoryModule,
+        networkServiceModule,
         dataSourceModule,
-        networkServiceModule
+        repositoryModule,
+        useCaseModule,
+        viewModelModule
     )
 
 }

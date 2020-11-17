@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface PlacesApi {
 
-    @GET
+    @GET("places")
     fun getPlaces(): Call<List<PlaceResponse>>
 
 }
