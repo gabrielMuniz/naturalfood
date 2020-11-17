@@ -20,7 +20,7 @@ class MainViewModel(private val placeUseCase: PlaceUseCase) : ViewModel() {
 
     sealed class State {
         object OnLoading : State()
-        data class OnSuccess(val places: List<Place>)
+        data class OnSuccess(val places: List<Place>) : State()
         object OnError : State()
     }
 
