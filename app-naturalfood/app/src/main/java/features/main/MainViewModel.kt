@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gsm.domain.features.places.Place
 import com.gsm.domain.features.places.interactors.PlaceUseCase
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
@@ -15,7 +16,9 @@ class MainViewModel(private val placeUseCase: PlaceUseCase) : ViewModel() {
     fun getPlaces() {
         try {
             viewModelScope.launch {
-                placeUseCase.getPlaces()
+                placeUseCase.getPlaces().collect {
+                    state.value = State.OnSuccess(it)
+                }
             }
         } catch (e: Exception) {
             e.printStackTrace()
