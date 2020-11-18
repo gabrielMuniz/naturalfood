@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--MARGINS-->
+    <dimen name="MARGIN_4DP">4dp</dimen>
+    <dimen name="MARGIN_8DP">8dp</dimen>
+
+    <!--DEFAULTS-->
+    <dimen name="DEFAULT_0DP">0dp</dimen>
+    <dimen name="DEFAULT_1DP">1dp</dimen>
+    <dimen name="DEFAULT_2DP">2dp</dimen>
+    <dimen name="DEFAULT_3DP">3dp</dimen>
+    <dimen name="DEFAULT_4DP">4dp</dimen>
+    <dimen name="DEFAULT_5DP">5dp</dimen>
+
+</resources>

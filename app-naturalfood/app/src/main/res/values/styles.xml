@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="itemTitle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="itemSubtitle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="itemDescription">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ratingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/purple_200</item>
+        <item name="colorControlActivated">@color/purple_500</item>
+    </style>
+
+</resources>
