@@ -1,4 +1,4 @@
-package com.gsm.naturalfood.features.search
+package com.gsm.naturalfood.features.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
-class SearchViewModel(private val placeUseCase: PlaceUseCase) : ViewModel() {
+class MainViewModel(private val placeUseCase: PlaceUseCase) : ViewModel() {
 
     val state = MutableLiveData<State>()
 

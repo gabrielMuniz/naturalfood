@@ -1,4 +1,4 @@
-package features.main.adapters
+package com.gsm.naturalfood.features.main.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gsm.domain.features.places.Place
 import com.gsm.naturalfood.R
-import features.main.adapters.PlaceAdapter.PlaceViewHolder
+import com.gsm.naturalfood.features.main.adapters.PlaceAdapter.PlaceViewHolder
 import kotlinx.android.synthetic.main.item_place.view.*
 
 class PlaceAdapter(private val context: Context, private val places: List<Place>) :

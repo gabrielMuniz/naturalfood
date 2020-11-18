@@ -1,12 +1,10 @@
-package features.main
+package com.gsm.naturalfood.features.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gsm.naturalfood.R
-import features.main.MainViewModel.State.OnError
-import features.main.MainViewModel.State.OnLoading
-import features.main.MainViewModel.State.OnSuccess
-import features.search.SearchFragment
+import com.gsm.naturalfood.features.main.MainViewModel
+import com.gsm.naturalfood.features.search.SearchFragment
 import kotlinx.android.synthetic.main.activity_main.bnMain
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -20,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupMenu()
-        //viewModel.getPlaces()
     }
 
     private fun setupMenu() {

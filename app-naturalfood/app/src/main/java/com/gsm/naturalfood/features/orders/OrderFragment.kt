@@ -1,4 +1,4 @@
-package features.orders
+package com.gsm.naturalfood.features.orders
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,5 +15,5 @@ class OrderFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_order, container, false)
     }
-    
+
 }

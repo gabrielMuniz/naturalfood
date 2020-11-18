@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="features.main.MainActivity">
+    tools:context=".com.gsm.naturalfood.features.main.MainActivity">
 
     <include
         android:id="@+id/toolbarApp"
@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toTopOf="@id/bnMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbarApp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnMain"
