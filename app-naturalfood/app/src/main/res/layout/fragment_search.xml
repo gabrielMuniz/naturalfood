@@ -1,0 +1,42 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="@dimen/DEFAULT_42DP"
+        android:layout_height="@dimen/DEFAULT_42DP"
+        android:layout_marginStart="@dimen/MARGIN_8DP"
+        android:layout_marginTop="@dimen/MARGIN_8DP"
+        android:layout_marginEnd="@dimen/MARGIN_4DP"
+        android:src="@drawable/ic_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_200" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edSearch"
+        android:layout_width="@dimen/DEFAULT_0DP"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/MARGIN_8DP"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivSearch"
+        app:layout_constraintTop_toTopOf="@id/ivSearch"
+        tools:text="Natura" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlaces"
+        android:layout_width="@dimen/DEFAULT_0DP"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch"
+        tools:listitem="@layout/item_place" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,5 +12,6 @@
     <dimen name="DEFAULT_3DP">3dp</dimen>
     <dimen name="DEFAULT_4DP">4dp</dimen>
     <dimen name="DEFAULT_5DP">5dp</dimen>
+    <dimen name="DEFAULT_42DP">42dp</dimen>
 
 </resources>
