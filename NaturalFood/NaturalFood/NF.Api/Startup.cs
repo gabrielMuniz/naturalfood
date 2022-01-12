@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using NF.Api.Configurations;
+using NF.Api.Configurations.Profiles;
 using NF.Infra.Data.Contexts;
 using System;
 using System.Collections.Generic;
@@ -36,6 +38,7 @@ namespace NF.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NF.Api", Version = "v1" });
             });
+            services.AddSingleton(services.AddMapperConfig());
 
         }
 
