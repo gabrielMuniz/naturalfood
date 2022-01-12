@@ -1,6 +1,6 @@
 ﻿namespace NF.Domain.Interfaces.Services
 {
-    interface IPlaceService
+    public interface IPlaceService
     {
     }
 }

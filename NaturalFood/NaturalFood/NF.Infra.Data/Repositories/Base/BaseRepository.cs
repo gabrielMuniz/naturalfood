@@ -1,4 +1,5 @@
 ﻿using NF.Domain.Interfaces.Repositories;
+using NF.Infra.Data.Contexts;
 using System;
 using System.Collections.Generic;
 
@@ -6,6 +7,14 @@ namespace NF.Infra.Data.Repositories.Base
 {
     public class BaseRepository<T> : IRepositoryBase<T> where T : class
     {
+
+        private readonly DefaultContext context;
+
+        public BaseRepository(DefaultContext context)
+        {
+            this.context = context;
+        }
+
         public void Add(T entity)
         {
             throw new NotImplementedException();
@@ -23,7 +32,7 @@ namespace NF.Infra.Data.Repositories.Base
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return context.Set<T>().Find(id);
         }
 
         public IEnumerable<T> GetByPredicate(Predicate<T> predicate)

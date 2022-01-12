@@ -1,22 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NF.Api.Configurations;
-using NF.Api.Configurations.Profiles;
 using NF.Infra.Data.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Threading.Tasks;
-
+    
 namespace NF.Api
 {
     public class Startup
@@ -38,7 +29,10 @@ namespace NF.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NF.Api", Version = "v1" });
             });
-            services.AddSingleton(services.AddMapperConfig());
+            services.AddRepositoryDependencies();
+            services.AddServiceDependencies();
+            services.AddAppServiceDependencies();
+            services.AddSingleton(services.AddMapperConfig().CreateMapper());
 
         }
 
