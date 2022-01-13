@@ -1,4 +1,5 @@
 ﻿using NF.Domain.Entities;
+using System.Collections.Generic;
 
 namespace NF.Domain.Interfaces.Services
 {
@@ -6,6 +7,7 @@ namespace NF.Domain.Interfaces.Services
     {
 
         FoodType GetById(int id);
+        IEnumerable<FoodType> GetAll();
 
     }
 }

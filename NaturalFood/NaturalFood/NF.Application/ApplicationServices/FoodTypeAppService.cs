@@ -22,7 +22,7 @@ namespace NF.Application.ApplicationServices
 
         public IEnumerable<FoodType> GetAll()
         {
-            throw new System.NotImplementedException();
+            return foodTypeService.GetAll();
         }
 
         public FoodType GetById(int id)

@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using NF.Api.Controllers.Base;
 using NF.Api.DTOs;
 using NF.Application.ApplicationServices.Interfaces;
+using System.Collections.Generic;
 
 namespace NF.Api.Controllers
 {
-    [Route("/foodtype")]
+    [Route("/foodtypes")]
     public class FoodTypeController : BaseController
     {
 
@@ -17,6 +18,13 @@ namespace NF.Api.Controllers
         {
             this.mapper = mapper;
             this.foodTypeAppService = foodTypeAppService;
+        }
+
+        [HttpGet]
+        public ActionResult<FoodTypeDTO> GetAll()
+        {
+            var foodTypes = mapper.Map<IEnumerable<FoodTypeDTO>>(foodTypeAppService.GetAll());
+            return Ok(foodTypes);
         }
 
         [HttpGet]

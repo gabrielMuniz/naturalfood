@@ -10,6 +10,7 @@ namespace NF.Api.Configurations
         {
             return new AutoMapper.MapperConfiguration(config =>
             {
+                config.AddProfile<FoodTypeProfile>();
                 config.AddProfile<PlaceProfile>();
             });
         }

@@ -21,12 +21,12 @@ namespace NF.Application.ApplicationServices
 
         public IEnumerable<Place> GetAll()
         {
-            throw new System.NotImplementedException();
+            return placeService.GetAll();
         }
 
         public Place GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return placeService.GetById(id);
         }
 
         public int Update(Place place)

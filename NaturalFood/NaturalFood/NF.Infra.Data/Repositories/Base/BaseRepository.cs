@@ -27,7 +27,7 @@ namespace NF.Infra.Data.Repositories.Base
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Set<T>();
         }
 
         public T GetById(int id)

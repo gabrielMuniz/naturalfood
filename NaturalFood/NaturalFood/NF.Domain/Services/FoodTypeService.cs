@@ -1,6 +1,7 @@
 ﻿using NF.Domain.Entities;
 using NF.Domain.Interfaces.Repositories;
 using NF.Domain.Interfaces.Services;
+using System.Collections.Generic;
 
 namespace NF.Domain.Services
 {
@@ -12,6 +13,11 @@ namespace NF.Domain.Services
         public FoodTypeService(IFoodTypeRepository foodTypeRepository)
         {
             this.foodTypeRepository = foodTypeRepository;
+        }
+
+        public IEnumerable<FoodType> GetAll()
+        {
+            return foodTypeRepository.GetAll();
         }
 
         public FoodType GetById(int id)
