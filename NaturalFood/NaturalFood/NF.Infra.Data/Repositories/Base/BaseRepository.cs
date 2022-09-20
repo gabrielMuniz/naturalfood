@@ -25,15 +25,9 @@ namespace NF.Infra.Data.Repositories.Base
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T> GetAll()
-        {
-            return context.Set<T>();
-        }
+        public IEnumerable<T> GetAll() => context.Set<T>();
 
-        public T GetById(int id)
-        {
-            return context.Set<T>().Find(id);
-        }
+        public T GetById(int id) => context.Set<T>().Find(id);
 
         public IEnumerable<T> GetByPredicate(Predicate<T> predicate)
         {

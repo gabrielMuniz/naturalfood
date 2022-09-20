@@ -20,19 +20,10 @@ namespace NF.Application.ApplicationServices
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<FoodType> GetAll()
-        {
-            return foodTypeService.GetAll();
-        }
+        public IEnumerable<FoodType> GetAll() => foodTypeService.GetAll();
 
-        public FoodType GetById(int id)
-        {
-            return foodTypeService.GetById(id);
-        }
+        public FoodType GetById(int id) => foodTypeService.GetById(id);
 
-        public int Update(FoodType foodType)
-        {
-            throw new System.NotImplementedException();
-        }
+        public int Update(FoodType foodType) => foodTypeService.Update(foodType);
     }
 }

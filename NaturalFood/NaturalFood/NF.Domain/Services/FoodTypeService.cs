@@ -15,14 +15,11 @@ namespace NF.Domain.Services
             this.foodTypeRepository = foodTypeRepository;
         }
 
-        public IEnumerable<FoodType> GetAll()
-        {
-            return foodTypeRepository.GetAll();
-        }
+        public IEnumerable<FoodType> GetAll() => foodTypeRepository.GetAll();
 
-        public FoodType GetById(int id)
-        {
-            return foodTypeRepository.GetById(id);
-        }
+
+        public FoodType GetById(int id) => foodTypeRepository.GetById(id);
+
+        public int Update(FoodType foodType) => foodTypeRepository.Update(foodType);
     }
 }

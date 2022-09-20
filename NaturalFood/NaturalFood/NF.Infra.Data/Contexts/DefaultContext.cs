@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Protocols;
 using NF.Domain.Entities;
-using System.Configuration;
+using NF.Infra.Data.Repositories;
 
 namespace NF.Infra.Data.Contexts
 {
@@ -10,6 +9,8 @@ namespace NF.Infra.Data.Contexts
 
         public DbSet<Place> Places { get; set; }
         public DbSet<FoodType> FoodTypes { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<EmployeeDepartmentHistory> EmployeeDepartmentHistories { get; set; }
 
         public DefaultContext(DbContextOptions options) : base(options)
         {

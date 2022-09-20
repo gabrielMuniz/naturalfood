@@ -15,14 +15,8 @@ namespace NF.Domain.Services
             this.placeRepository = placeRepository;
         }
 
-        public IEnumerable<Place> GetAll()
-        {
-            return placeRepository.GetAll();
-        }
+        public IEnumerable<Place> GetAll() => placeRepository.GetAll();
 
-        public Place GetById(int id)
-        {
-            return placeRepository.GetById(id);
-        }
+        public Place GetById(int id) => placeRepository.GetById(id);
     }
 }

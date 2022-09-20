@@ -11,6 +11,7 @@ namespace NF.Api.Configurations
         {
             services.AddTransient<IPlaceRepository, PlaceRepository>();
             services.AddTransient<IFoodTypeRepository, FoodTypeRepository>();
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
         }
 
     }

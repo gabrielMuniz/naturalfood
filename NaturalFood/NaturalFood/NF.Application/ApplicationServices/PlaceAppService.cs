@@ -19,15 +19,9 @@ namespace NF.Application.ApplicationServices
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<Place> GetAll()
-        {
-            return placeService.GetAll();
-        }
+        public IEnumerable<Place> GetAll() => placeService.GetAll();
 
-        public Place GetById(int id)
-        {
-            return placeService.GetById(id);
-        }
+        public Place GetById(int id) => placeService.GetById(id);
 
         public int Update(Place place)
         {

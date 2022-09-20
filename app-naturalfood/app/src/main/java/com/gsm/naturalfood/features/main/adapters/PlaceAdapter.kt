@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gsm.domain.features.places.Place
 import com.gsm.naturalfood.R
 import com.gsm.naturalfood.features.main.adapters.PlaceAdapter.PlaceViewHolder
-import kotlinx.android.synthetic.main.item_place.view.*
 
 class PlaceAdapter(private val context: Context, private val places: List<Place>) :
     RecyclerView.Adapter<PlaceViewHolder>() {
