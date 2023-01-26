@@ -1,0 +1,5 @@
+.vs
+obj
+*.dll
+**/bin
+NaturalFood/NaturalFood/NF.Infra.Data/bin/Debug/net5.0/NF.Infra.Data.pdb

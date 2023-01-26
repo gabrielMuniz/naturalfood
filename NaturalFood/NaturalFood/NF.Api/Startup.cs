@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using NF.Api.Configurations;
+using NF.Api.Configurations.BackgroundServices;
+using NF.Api.Configurations.Consumers;
+using NF.Api.Jobs;
 using NF.Infra.Data.Contexts;
 
 namespace NF.Api
@@ -33,6 +36,15 @@ namespace NF.Api
             services.AddServiceDependencies();
             services.AddAppServiceDependencies();
             services.AddSingleton(services.AddMapperConfig().CreateMapper());
+            //services.AddDistributedRedisCache(options =>
+            //{
+            //    options.Configuration =
+            //        Configuration.GetConnectionString("ConexaoRedis");
+            //    options.InstanceName = "APICotacoes-";
+            //});
+            services.AddHostedService<PlacesMessageConsumer>();
+            services.Configure<RabbitMqConfiguration>(Configuration
+                .GetSection("RabbitMQConfig"));
 
         }
 
