@@ -42,9 +42,9 @@ namespace NF.Api
             //        Configuration.GetConnectionString("ConexaoRedis");
             //    options.InstanceName = "APICotacoes-";
             //});
-            services.AddHostedService<PlacesMessageConsumer>();
-            services.Configure<RabbitMqConfiguration>(Configuration
-                .GetSection("RabbitMQConfig"));
+            //services.AddHostedService<PlacesMessageConsumer>();
+            //services.Configure<RabbitMqConfiguration>(Configuration
+            //  .GetSection("RabbitMQConfig"));
 
         }
 

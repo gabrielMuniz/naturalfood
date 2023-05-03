@@ -24,6 +24,6 @@ namespace NF.Application.ApplicationServices
 
         public FoodType GetById(int id) => foodTypeService.GetById(id);
 
-        public int Update(FoodType foodType) => foodTypeService.Update(foodType);
+        public FoodType Update(FoodType foodType) => foodTypeService.Update(foodType);
     }
 }

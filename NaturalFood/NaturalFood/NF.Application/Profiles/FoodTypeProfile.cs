@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using NF.Api.DTOs;
+using NF.Application.DTOs;
 using NF.Domain.Entities;
 
-namespace NF.Api.Configurations.Profiles
+namespace NF.Application.Configurations.Profiles
 {
     public class FoodTypeProfile : Profile
     {

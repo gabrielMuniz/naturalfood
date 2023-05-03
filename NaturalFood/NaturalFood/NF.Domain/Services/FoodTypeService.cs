@@ -20,6 +20,7 @@ namespace NF.Domain.Services
 
         public FoodType GetById(int id) => foodTypeRepository.GetById(id);
 
-        public int Update(FoodType foodType) => foodTypeRepository.Update(foodType);
+        public FoodType Update(FoodType foodType) => foodTypeRepository.Update(foodType);
+
     }
 }

@@ -8,7 +8,7 @@ namespace NF.Domain.Interfaces.Services
 
         FoodType GetById(int id);
         IEnumerable<FoodType> GetAll();
-        int Update(FoodType entity);
+        FoodType Update(FoodType entity);
 
     }
 }

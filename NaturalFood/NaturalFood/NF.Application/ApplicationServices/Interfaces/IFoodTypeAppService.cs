@@ -8,6 +8,6 @@ namespace NF.Application.ApplicationServices.Interfaces
         IEnumerable<FoodType> GetAll();
         FoodType GetById(int id);
         int Delete(int id);
-        int Update(FoodType foodType);
+        FoodType Update(FoodType foodType);
     }
 }

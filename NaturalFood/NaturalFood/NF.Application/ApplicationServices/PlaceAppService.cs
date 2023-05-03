@@ -23,7 +23,7 @@ namespace NF.Application.ApplicationServices
 
         public Place GetById(int id) => placeService.GetById(id);
 
-        public int Update(Place place)
+        public Place Update(Place place)
         {
             throw new System.NotImplementedException();
         }

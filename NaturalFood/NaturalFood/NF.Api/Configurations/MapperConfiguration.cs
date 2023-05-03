@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NF.Api.Configurations.Profiles;
+using NF.Application.Configurations.Profiles;
 
 namespace NF.Api.Configurations
 {
@@ -12,6 +12,7 @@ namespace NF.Api.Configurations
             {
                 config.AddProfile<FoodTypeProfile>();
                 config.AddProfile<PlaceProfile>();
+                config.AddProfile<OrderProfile>();
             });
         }
 

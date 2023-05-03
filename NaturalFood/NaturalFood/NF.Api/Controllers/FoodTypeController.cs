@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using NF.Api.Controllers.Base;
-using NF.Api.DTOs;
 using NF.Application.ApplicationServices.Interfaces;
+using NF.Application.DTOs;
 using System.Collections.Generic;
 
 namespace NF.Api.Controllers

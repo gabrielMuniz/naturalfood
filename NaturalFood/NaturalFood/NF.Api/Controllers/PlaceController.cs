@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using NF.Api.Controllers.Base;
-using NF.Api.DTOs;
 using NF.Application.ApplicationServices.Interfaces;
+using NF.Application.DTOs;
 using RabbitMQ.Client;
 using System.Collections.Generic;
 using System.Text;

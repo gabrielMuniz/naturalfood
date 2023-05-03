@@ -8,7 +8,7 @@ namespace NF.Infra.Data.Repositories.Base
     public class BaseRepository<T> : IRepositoryBase<T> where T : class
     {
 
-        private readonly DefaultContext context;
+        protected readonly DefaultContext context;
 
         public BaseRepository(DefaultContext context)
         {
@@ -34,9 +34,9 @@ namespace NF.Infra.Data.Repositories.Base
             throw new NotImplementedException();
         }
 
-        public int Update(T entity)
+        public T Update(T entity)
         {
-            throw new NotImplementedException();
+            return context.Set<T>().Update(entity).Entity;
         }
     }
 }

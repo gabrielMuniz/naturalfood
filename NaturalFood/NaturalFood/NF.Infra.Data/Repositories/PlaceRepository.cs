@@ -8,7 +8,6 @@ namespace NF.Infra.Data.Repositories
     public class PlaceRepository : BaseRepository<Place>, IPlaceRepository
     {
         public PlaceRepository(DefaultContext context) : base(context)
-        {
-        }
+        {}
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace NF.Api.DTOs
+﻿namespace NF.Application.DTOs
 {
     public class PlaceDTO
     {

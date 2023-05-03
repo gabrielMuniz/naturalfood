@@ -8,7 +8,7 @@ namespace NF.Application.ApplicationServices.Interfaces
         IEnumerable<Place> GetAll();
         Place GetById(int id);
         int Delete(int id);
-        int Update(Place place);
+        Place Update(Place place);
 
     }
 }

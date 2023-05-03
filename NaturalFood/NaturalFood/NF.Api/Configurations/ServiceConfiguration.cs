@@ -11,6 +11,7 @@ namespace NF.Api.Configurations
         {
             services.AddTransient<IPlaceService, PlaceService>();
             services.AddTransient<IFoodTypeService, FoodTypeService>();
+            services.AddTransient<IOrderService, OrderService>();
         }
 
     }

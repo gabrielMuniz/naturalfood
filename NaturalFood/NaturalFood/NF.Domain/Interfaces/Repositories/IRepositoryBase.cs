@@ -10,7 +10,7 @@ namespace NF.Domain.Interfaces.Repositories
         T GetById(int id);
         IEnumerable<T> GetByPredicate(Predicate<T> predicate);
         int Delete(T entity);
-        int Update(T entity);
+        T Update(T entity);
         IEnumerable<T> GetAll();
 
     }
